@@ -19,7 +19,7 @@ PreCommit:
   RuboCop:
     enabled: true
     command: ["bundle", "exec", "rubocop"]
-#    on_warn: fail # Treat all warnings as failures
+
 #
 #  TrailingWhitespace:
 #    enabled: true
@@ -32,3 +32,6 @@ PreCommit:
 #
 #  IndexTags:
 #    enabled: true # Generate a tags file with `ctags` each time HEAD changes
+PrePush:
+  Minitest:
+    enabled: true

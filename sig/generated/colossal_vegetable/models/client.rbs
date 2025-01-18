@@ -1,0 +1,19 @@
+# Generated from lib/colossal_vegetable/models/client.rb with RBS::Inline
+
+module ColossalVegetable
+  module Models
+    class Client
+      attr_reader id: Integer
+
+      attr_reader full_name: String
+
+      attr_reader email: String
+
+      # @rbs id: Integer
+      # @rbs full_name: String
+      # @rbs email: String
+      # @rbs return: void
+      def initialize: (id: Integer, full_name: String, email: String) -> void
+    end
+  end
+end

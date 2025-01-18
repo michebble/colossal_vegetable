@@ -10,3 +10,6 @@ AllCops:
 
 Layout/LineLength:
   Max: 200
+
+Layout/LeadingCommentSpace:
+  Enabled: false

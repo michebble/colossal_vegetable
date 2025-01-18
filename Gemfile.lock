@@ -31,6 +31,7 @@ GEM
     ffi (1.17.1)
     ffi (1.17.1-x86_64-darwin)
     fileutils (1.7.3)
+    foreman (0.88.1)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
@@ -126,6 +127,8 @@ PLATFORMS
 
 DEPENDENCIES
   debug
+  foreman (~> 0.88.1)
+  minitest (~> 5.25)
   overcommit (~> 0.64.1)
   rbs-inline (~> 0.10.0)
   rubocop (~> 1.70)
