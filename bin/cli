@@ -2,5 +2,5 @@
 # frozen_string_literal: true
 
 require_relative "../lib/cli_app"
-
-CLIApp.new(argv: ARGV).run
+config = { filepath: "clients.json" }
+CLIApp.new(argv: ARGV, config:).run
