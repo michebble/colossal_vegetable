@@ -1,0 +1,14 @@
+# Generated from lib/cli_app.rb with RBS::Inline
+
+class CLIApp
+  # @rbs argv: Array[String]
+  # @rbs return: void
+  def initialize: (argv: Array[String]) -> void
+
+  # @rbs return: void
+  def run: () -> void
+
+  private
+
+  attr_reader argv: Array[String]
+end
