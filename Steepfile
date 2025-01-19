@@ -4,16 +4,9 @@ D = Steep::Diagnostic
 
 target :lib do
   signature "sig"
-
-  check "lib/**/*.rb" # Directory name
+  check "lib" # Directory name
   library "json"
-  #   check "path/to/source.rb"         # File name
-  #   check "app/models/**/*.rb"        # Glob
-  #   # ignore "lib/templates/*.rb"
-  #
-  #   # library "pathname"              # Standard libraries
-  #   # library "strong_json"           # Gems
-  #
+
   configure_code_diagnostics(D::Ruby.default) # `default` diagnostics setting (applies by default)
   #   # configure_code_diagnostics(D::Ruby.strict)       # `strict` diagnostics setting
   #   # configure_code_diagnostics(D::Ruby.lenient)      # `lenient` diagnostics setting

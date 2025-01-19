@@ -16,7 +16,7 @@ The project itself if for loading data into a model, performing actions on it, a
 
 ## CLI application
 
-The cli will be run with `bin/cli` followed by the action; `search <search-term>` or `duplicates`. For now, this will attempt to load clients.json, execute the action, then output the result as JSON to stdout.
+The cli is run with `bin/cli` followed by the action; `search <search-term>`. This will search the name value of the clients to find those that partial match the search-term.
 
 Later there will be flags to specify further behaviours, such as data source, output format, resource model.
 
