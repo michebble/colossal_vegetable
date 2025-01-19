@@ -16,8 +16,8 @@ class CLIApp
   # @rbs return: void
   def run
     case argv
-    in ["search", String]
-      search(argv[1])
+    in ["search", String=>query] then search(query)
+    in ["duplicates"] then duplicates
     in ["search"]
       $stderr.puts "Please provide a search query"
       return
@@ -30,6 +30,9 @@ class CLIApp
 
   private
 
+  attr_reader :argv #: Array[String]
+  attr_reader :results #: Array[Hash[Symbol, String]]
+
   # @rbs query: String
   # @rbs return: Array[{ id: Integer, full_name: String, email: String }]
   def search(query = nil)
@@ -38,8 +41,14 @@ class CLIApp
     end
   end
 
-  attr_reader :argv #: Array[String]
-  attr_reader :results #: Array[Hash[Symbol, String]]
+  # @rbs return: Array[{ id: Integer, full_name: String, email: String }]
+  def duplicates
+    @results = data
+      .group_by { |row| row[:email] }
+      .select { |_email, items| items.size > 1 }
+      .values
+      .flatten
+  end
 
   # @rbs return: Array[{ id: Integer, full_name: String, email: String }]
   def data

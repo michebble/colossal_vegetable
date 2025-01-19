@@ -5,11 +5,20 @@ require_relative "../lib/cli_app"
 require "debug"
 
 class CLIAppTest < Minitest::Test
-  def test_search_integration
+  def test_search
     std, err = capture_io { CLIApp.new(argv: ["search", "john"]).run }
     assert_empty(err)
     assert_match(
       '[{"id":1,"full_name":"John Doe","email":"john.doe@gmail.com"},{"id":3,"full_name":"Alex Johnson","email":"alex.johnson@hotmail.com"}]',
+      std,
+    )
+  end
+
+  def test_duplicate
+    std, err = capture_io { CLIApp.new(argv: ["duplicates"]).run }
+    assert_empty(err)
+    assert_match(
+      '[{"id":2,"full_name":"Jane Smith","email":"jane.smith@yahoo.com"},{"id":15,"full_name":"Another Jane Smith","email":"jane.smith@yahoo.com"}]',
       std,
     )
   end
