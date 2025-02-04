@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "full_name": "Jerry Doe",
+    "email": "jerry.doe@gmail.com",
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "full_name": "Melanie Smith",
+    "email": "melanie.smith@yahoo.com",
+    "rating": 3.8
+  },
+  {
+    "id": 3,
+    "full_name": "Alex Kane",
+    "email": "alex.kane@hotmail.com",
+    "rating": 4.2
+  },
+  {
+    "id": 4,
+    "full_name": "Mike Jones",
+    "email": "michael.jones@outlook.com",
+    "rating": 2.8
+  },
+  {
+    "id": 5,
+    "full_name": "Another Alex Kane",
+    "email": "alex.kane@hotmail.com",
+    "rating": 3.7
+  }
+]

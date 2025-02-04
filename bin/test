@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require "minitest/autorun"
-Dir.glob(File.join(__dir__, "../test/**/*_test.rb")).each { |file| require file }

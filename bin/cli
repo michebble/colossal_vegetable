@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require_relative "../lib/cli_app"
-config = { filepath: "clients.json" }
-CLIApp.new(argv: ARGV, config:).run
+require_relative "../lib/colossal_vegetable"
+
+ColossalVegetable::CLI.new.run

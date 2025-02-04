@@ -1,0 +1,20 @@
+# Generated from lib/colossal_vegetable/options.rb with RBS::Inline
+
+module ColossalVegetable
+  class Options
+    # @rbs return: void
+    def initialize: () -> void
+
+    # @rbs command_line_args: Array[String]
+    # @rbs return: {filepath: String}
+    def parse: (Array[String] command_line_args) -> { filepath: String }
+
+    private
+
+    attr_accessor options: { filepath: String }
+
+    def define_options: () -> untyped
+
+    def add_input_option: (untyped opts) -> untyped
+  end
+end

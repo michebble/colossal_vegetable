@@ -1,0 +1,26 @@
+# Generated from lib/colossal_vegetable/cli.rb with RBS::Inline
+
+module ColossalVegetable
+  class CLI
+    # @rbs argv: Array[String]
+    # @rbs return: void
+    def run: (?Array[String] argv) -> void
+
+    private
+
+    attr_reader config: { filepath: String }
+
+    attr_reader data: Array[{ id: Integer, full_name: String, email: String }]
+
+    # @rbs query: String
+    # @rbs return: Array[{ id: Integer, full_name: String, email: String }]
+    def search: (?String query) -> Array[{ id: Integer, full_name: String, email: String }]
+
+    # @rbs return: Array[{ id: Integer, full_name: String, email: String }]
+    def duplicates: () -> Array[{ id: Integer, full_name: String, email: String }]
+
+    # @rbs filepath: String
+    # @rbs return: void
+    def load_data: (String filepath) -> void
+  end
+end
