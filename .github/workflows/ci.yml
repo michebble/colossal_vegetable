@@ -19,5 +19,13 @@ jobs:
           ruby-version: .tool-versions
           bundler-cache: true
 
-      - name: Run Overcommit
-        run: bundle exec overcommit --run
+      - name: Set git user
+        run: |
+          git config --global user.email "gh-actions@example.com"
+          git config --global user.name ${{ github.actor }}
+
+      - name: Overcommit Checks
+        run: |
+          bundle exec overcommit --sign
+          bundle exec overcommit --sign pre-commit
+          bundle exec overcommit --run
