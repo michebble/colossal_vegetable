@@ -23,11 +23,25 @@ module ColossalVegetable
 
     def define_options
       OptionParser.new do |opts|
-        opts.banner = "Usage: bin/cli action [options]"
+        opts.banner = <<~BANNER
+          Welcome to Colossal Vegetable!
+
+          Usage:
+            bin/cli [command] [options]
+
+          Example:
+            bin/cli search john -i clients.json
+
+          Commands:
+            search [query] - Search for a client by full_name
+            duplicates - Find clients with duplicate emails
+
+          Options:
+        BANNER
 
         add_input_option(opts)
 
-        opts.on_tail("-h", "--help", "Show this message") do
+        opts.on_tail("-h", "--help", "Shows this message") do
           puts opts
           exit
         end
@@ -35,7 +49,7 @@ module ColossalVegetable
     end
 
     def add_input_option(opts)
-      opts.on("-i", "--input FILEPATH", String, "Path to JSON file") do |filepath|
+      opts.on("-iFILEPATH", "--input=FILEPATH", String, "Path to JSON file containing the records") do |filepath|
         options[:filepath] = filepath
       end
     end

@@ -16,9 +16,38 @@ The project itself if for loading data into a model, performing actions on it, a
 
 ## CLI application
 
-The cli is run with `bin/cli` followed by the action; `search <search-term>`. This will search the name value of the clients to find those that partial match the search-term.
+The cli is run with `bin/cli` followed one of the following actions
 
-Later there will be flags to specify further behaviours, such as data source, output format, resource model.
+### Commands
+
+The commands tell the cli what action to perform on the records
+
+#### Search
+
+Search the records by `full_name`, allows for partial matches and is case insensitive.
+
+```
+bin/cli search <search-term>
+```
+
+#### Duplicates
+
+Finds all entries with the `email` value duplicated across records.
+
+```
+bin/cli duplicates
+```
+
+### Options
+
+#### Input
+
+Specifies the location of the JSON file containing the records.
+`-i --input=FILENAME`
+
+```
+bin/cli duplicates -i clients.json
+```
 
 ## Development
 
