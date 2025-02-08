@@ -20,6 +20,10 @@ PreCommit:
     enabled: true
     command: ["bundle", "exec", "rubocop"]
 
+  Steep:
+    enabled: true
+    description: "Run Steep type checking"
+
 #
 #  TrailingWhitespace:
 #    enabled: true

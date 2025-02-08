@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  overcommit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .tool-versions
+          bundler-cache: true
+
+      - name: Set git user
+        run: |
+          git config --global user.email "gh-actions@example.com"
+          git config --global user.name ${{ github.actor }}
+
+      - name: Overcommit Checks
+        run: |
+          bundle exec overcommit --sign
+          bundle exec overcommit --sign pre-commit
+          bundle exec overcommit --run
+
+      - name: Run tests
+        run: bundle exec rake test
