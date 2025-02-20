@@ -3,7 +3,7 @@
 # rbs_inline: enabled
 require "optparse"
 
-module ColossalVegetable
+module Turnip
   class Options
     # @rbs return: void
     def initialize

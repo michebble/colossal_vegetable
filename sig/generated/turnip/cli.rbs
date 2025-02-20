@@ -1,6 +1,6 @@
-# Generated from lib/colossal_vegetable/cli.rb with RBS::Inline
+# Generated from lib/turnip/cli.rb with RBS::Inline
 
-module ColossalVegetable
+module Turnip
   class CLI
     # @rbs argv: Array[String]
     # @rbs return: void
