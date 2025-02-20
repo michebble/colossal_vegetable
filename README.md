@@ -59,6 +59,6 @@ The required Ruby version is 3.4.1 as defined in [.tool-versions](.tool-versions
 
 Once the project has been cloned, run `bundle install` to ensure the required gems are present for the project.
 
-Tests can then be run with `bin/test`
+Tests can then be run with `bin/rake test`
 
 Running `bin/forman start` will start processes to watch for file changes and either generate type signature files, or run tests. This will require fswatch to be present on the system.
