@@ -3,7 +3,7 @@
 # rbs_inline: enabled
 require "json"
 require_relative "options"
-module ColossalVegetable
+module Turnip
   class CLI
     # @rbs argv: Array[String]
     # @rbs return: void

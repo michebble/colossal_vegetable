@@ -1,4 +1,6 @@
-# Colossal Vegetable
+# Turnip
+
+Formally Colossal Vegetable
 
 ## Description
 
@@ -12,11 +14,11 @@ This is a project for experimenting with different Ruby tech.
 
 Also, this project will let me play with the structural organisation.
 
-The project itself if for loading data into a model, performing actions on it, and then presenting it to the result. Initially this will be a cli app, but I would like to expand the scope to GUI and web server in the future.
+The project itself if for loading data into a model, performing actions on it, and then presenting it to the result. Initially this will be a cli app, but I would like to expand the scope to GUI and web server in the future. It is doing too much and probably over complicated, but it's just for fun.
 
 ## CLI application
 
-The cli is run with `bin/cli` followed one of the following actions
+The cli is run with `bin/turnip` followed one of the following actions
 
 ### Commands
 
@@ -27,7 +29,7 @@ The commands tell the cli what action to perform on the records
 Search the records by `full_name`, allows for partial matches and is case insensitive.
 
 ```
-bin/cli search <search-term>
+bin/turnip search <search-term>
 ```
 
 #### Duplicates
@@ -35,7 +37,7 @@ bin/cli search <search-term>
 Finds all entries with the `email` value duplicated across records.
 
 ```
-bin/cli duplicates
+bin/turnip duplicates
 ```
 
 ### Options
@@ -46,7 +48,7 @@ Specifies the location of the JSON file containing the records.
 `-i --input=FILENAME`
 
 ```
-bin/cli duplicates -i clients.json
+bin/turnip duplicates -i clients.json
 ```
 
 ## Development

@@ -1,6 +1,6 @@
-# Generated from lib/colossal_vegetable/options.rb with RBS::Inline
+# Generated from lib/turnip/options.rb with RBS::Inline
 
-module ColossalVegetable
+module Turnip
   class Options
     # @rbs return: void
     def initialize: () -> void
