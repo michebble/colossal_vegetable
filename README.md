@@ -16,6 +16,8 @@ Also, this project will let me play with the structural organisation.
 
 The project itself if for loading data into a model, performing actions on it, and then presenting it to the result. Initially this will be a cli app, but I would like to expand the scope to GUI and web server in the future. It is doing too much and probably over complicated, but it's just for fun.
 
+Sample data can be found in the [sample_data](/sample_data/) directory. PLease use it to try out the functionality.
+
 ## CLI application
 
 The cli is run with `bin/turnip` followed one of the following actions
@@ -29,7 +31,7 @@ The commands tell the cli what action to perform on the records
 Search the records by `full_name`, allows for partial matches and is case insensitive.
 
 ```
-bin/turnip search <search-term>
+bin/turnip search <search-term> -i sample_data/clients.json
 ```
 
 #### Duplicates
@@ -37,7 +39,7 @@ bin/turnip search <search-term>
 Finds all entries with the `email` value duplicated across records.
 
 ```
-bin/turnip duplicates
+bin/turnip duplicates -i sample_data/clients.json
 ```
 
 ### Options
@@ -48,7 +50,7 @@ Specifies the location of the JSON file containing the records.
 `-i --input=FILENAME`
 
 ```
-bin/turnip duplicates -i clients.json
+bin/turnip duplicates -i sample_date/staff.json
 ```
 
 ## Development
