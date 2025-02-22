@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-require "minitest/autorun"
-require_relative "../../lib/turnip/cli"
+require "test_helper"
 
 class CLITest < Minitest::Test
   def test_search
